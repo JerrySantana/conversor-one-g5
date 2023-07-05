@@ -1,4 +1,4 @@
-package conversor_divisas;
+package conversor;
 
 public class Divisa {
 	private Divisas origen;

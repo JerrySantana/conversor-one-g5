@@ -1,10 +1,12 @@
 package gui;
 
-import conversor_divisas.Divisas;
-import conversor_divisas.Divisa;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import conversor.Divisa;
+import conversor.Divisas;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import java.awt.Font;

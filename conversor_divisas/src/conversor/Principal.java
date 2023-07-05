@@ -1,4 +1,4 @@
-package conversor_divisas;
+package conversor;
 
 import gui.VentanaInicio;
 
