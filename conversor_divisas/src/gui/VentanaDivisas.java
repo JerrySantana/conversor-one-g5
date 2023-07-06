@@ -31,7 +31,7 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 	public VentanaDivisas() {
 		setTitle("Conversor Divisas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(380, 290);
+		setSize(400, 290);
 		componentes();
 	}
 	
@@ -66,13 +66,13 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 		
 		cbDe = new JComboBox();
 		cbDe.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 16));
-		cbDe.setModel(new DefaultComboBoxModel(new Divisas[] {Divisas.DOLAR, Divisas.EURO, Divisas.LIBRAS, Divisas.YEN, Divisas.WONCOREANO, Divisas.PESOSMEXICANOS}));
+		cbDe.setModel(new DefaultComboBoxModel(new Divisas[] {Divisas.DOLAR, Divisas.EURO, Divisas.LIBRAS, Divisas.YEN, Divisas.KRW, Divisas.MXN}));
 		cbDe.setBounds(10, 120, 140, 30);
 		panelDivisas.add(cbDe);
 		
 		cbA = new JComboBox();
 		cbA.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 16));
-		cbA.setModel(new DefaultComboBoxModel(new Divisas[] {Divisas.DOLAR, Divisas.EURO, Divisas.LIBRAS, Divisas.YEN, Divisas.WONCOREANO, Divisas.PESOSMEXICANOS}));
+		cbA.setModel(new DefaultComboBoxModel(new Divisas[] {Divisas.DOLAR, Divisas.EURO, Divisas.LIBRAS, Divisas.YEN, Divisas.KRW, Divisas.MXN}));
 		cbA.setBounds(210, 120, 140, 30);
 		panelDivisas.add(cbA);
 		
@@ -128,7 +128,7 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 				Divisas origen = (Divisas) cbDe.getSelectedItem();
 				Divisas destino = (Divisas) cbA.getSelectedItem();
 				resultado = new Divisa(origen, destino, valor);
-				lblResultado.setText(resultado.convertir()+"");
+				lblResultado.setText(resultado.convertir()+" "+destino.name());
 			} catch (NumberFormatException ex) {
 				lblResultado.setText("Valor inválido.");
 				JOptionPane.showMessageDialog(null, "Valor inválido, revisa los datos ingresados.", "Valor inválido.", JOptionPane.ERROR_MESSAGE);
