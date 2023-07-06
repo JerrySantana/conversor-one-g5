@@ -36,7 +36,7 @@ public class VentanaInicio extends JFrame {
 		
 		JComboBox cbTipoConversion = new JComboBox();
 		cbTipoConversion.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 20));
-		cbTipoConversion.setModel(new DefaultComboBoxModel(new String[] {"Divisas", "Peso"}));
+		cbTipoConversion.setModel(new DefaultComboBoxModel(new String[] {"Divisas", "Temperatura"}));
 		cbTipoConversion.setBounds(15, 60, 240, 35);
 		getContentPane().add(cbTipoConversion);
 		
@@ -46,8 +46,9 @@ public class VentanaInicio extends JFrame {
 				if(cbTipoConversion.getSelectedItem() == "Divisas") {
 					dispose();
 					new VentanaDivisas().setVisible(true);
-				} else {
-					
+				} else if(cbTipoConversion.getSelectedItem() == "Temperatura") {
+					dispose();
+					new VentanaTemperaturas().setVisible(true);
 				}
 			}
 		});

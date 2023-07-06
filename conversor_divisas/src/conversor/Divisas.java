@@ -1,5 +1,5 @@
 package conversor;
 
 public enum Divisas {
-	DOLAR, EURO, LIBRAS, YEN, KRW, MXN
+	Dolar, Euro, Libras, Yen, KRW, MXN
 }
