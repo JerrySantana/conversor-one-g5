@@ -17,6 +17,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class VentanaDivisas extends JFrame implements ActionListener {
 
@@ -38,11 +39,16 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 	// Crea y muestra la ventana y sus componentes.
 	private void componentes() {
 		panelDivisas = new JPanel();
+		VentanaTipoDeCambio ventana = new VentanaTipoDeCambio();
+		ventana.setVisible(true);
+		panelDivisas.setBackground(new Color(128, 128, 128));
 		setContentPane(panelDivisas);
 		panelDivisas.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panelDivisas.setLayout(null);
 
 		JLabel lblConversion = new JLabel("Ingresa el valor a convertir:");
+		lblConversion.setForeground(new Color(0, 0, 0));
+		lblConversion.setBackground(new Color(255, 255, 255));
 		lblConversion.setHorizontalAlignment(SwingConstants.CENTER);
 		lblConversion.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 20));
 		lblConversion.setBounds(65, 10, 240, 30);
@@ -88,6 +94,7 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
+				ventana.dispose();
 				new VentanaInicio().setVisible(true);
 			}
 		});

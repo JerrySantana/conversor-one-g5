@@ -10,6 +10,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class VentanaInicio extends JFrame {
 
@@ -26,6 +27,7 @@ public class VentanaInicio extends JFrame {
 	// Crea y muestra la ventana y sus componentes.
 	private void componentes() {
 		panelPrincipal = new JPanel();
+		panelPrincipal.setBackground(new Color(128, 128, 128));
 		setContentPane(panelPrincipal);
 		
 		JLabel lblPregunta = new JLabel("¿Qué deseas convertir?");

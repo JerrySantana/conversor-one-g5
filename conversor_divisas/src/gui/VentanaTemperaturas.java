@@ -18,6 +18,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
 
 public class VentanaTemperaturas extends JFrame implements ActionListener {
 
@@ -41,6 +42,7 @@ public class VentanaTemperaturas extends JFrame implements ActionListener {
 
 	private void componentes() {
 		panelTemperaturas = new JPanel();
+		panelTemperaturas.setBackground(new Color(128, 128, 128));
 		setContentPane(panelTemperaturas);
 		panelTemperaturas.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panelTemperaturas.setLayout(null);
@@ -128,11 +130,16 @@ public class VentanaTemperaturas extends JFrame implements ActionListener {
 		table.setColumnSelectionAllowed(true);
 		table.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 18));
 		table.setModel(new DefaultTableModel(
-				new Object[][] { { null, "Celsius", "Fahrenheit", "Kelvin" },
-						{ "Celsius", "1 \u00B0C", "33.8 \u00B0F", "274.15 K" },
-						{ "Fahrenheit", "-17.222 \u00B0C", "1 \u00B0F", "255.928 K" },
-						{ "Kelvin", "-272.15 \u00B0C", null, "1 K" }, },
-				new String[] { "", "Celsius", "Fahrenheit", "Kelvin" }));
+			new Object[][] {
+				{null, "Celsius", "Fahrenheit", "Kelvin"},
+				{"Celsius", "1 \u00B0C", "33.8 \u00B0F", "274.15 K"},
+				{"Fahrenheit", "-17.222 \u00B0C", "1 \u00B0F", "255.928 K"},
+				{"Kelvin", "-272.15 \u00B0C", "-457.87 \u00B0F", "1 K"},
+			},
+			new String[] {
+				"", "Celsius", "Fahrenheit", "Kelvin"
+			}
+		));
 		table.setBounds(10, 190, 366, 64);
 		panelTemperaturas.add(table);
 
