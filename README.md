@@ -2,8 +2,7 @@
 
 **Solución al Challenge ONE Back End - Java (Sprint 01) ➡️ Conversor de divisas.**
 
-<img src="portada1.png" width="200" height="200">
-<img src="portada2.png" width="200" height="200"> 
+<img src="portada1.png" width="200" height="200"> <img src="portada2.png" width="200" height="200"> 
 
 **Contenido.**
 ---
