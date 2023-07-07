@@ -39,7 +39,7 @@
 <img src="divisas1.png" width="600" height="200">  
 
 ### La segunda ventana es la ventana de conversión propia, contamos con una caja para ingresar el valor del cuál queremos realizar la conversión, don menús de opciones desplegables en los cuales podemos decidir a partir de qué moneda queremos realizar la conversión y hacia qué moneda la queremos realizar, un botón para poder realizar la conversión, una caja donde mostrar el resultado y dos botones extra, uno para regresar a la ventana anterior y otro para salir de la aplicación.
-<img src="divisas2.png" width="200" height="200"> <img src="divisas3.png" width="200" height="200"><img src="divisas4.png" width="200" height="200">  
+<img src="divisas2.png" width="200" height="200"> <img src="divisas3.png" width="200" height="200"> <img src="divisas4.png" width="200" height="200">  
 
 ### En el apartado de conversión de temperatura tenemos solamente una ventana la cual cuenta con un diseño muy parecido con la ventana de conversión de divisas pero en esta contamos con una pequeña tabla que muestra una conversión de cada tipo de grado a otro diferente.
 <img src="temp1.png" width="200" height="200"> <img src="temp2.png" width="200" height="200"> <img src="temp3.png" width="200" height="200">   
