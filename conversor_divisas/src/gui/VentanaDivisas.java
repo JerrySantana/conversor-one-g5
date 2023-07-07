@@ -32,7 +32,7 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 	public VentanaDivisas() {
 		setTitle("Conversor Divisas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(400, 290);
+		setSize(380, 290);
 		componentes();
 	}
 

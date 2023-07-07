@@ -4,7 +4,6 @@ import conversor.Temperaturas;
 import conversor.Temperatura;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
@@ -44,7 +43,6 @@ public class VentanaTemperaturas extends JFrame implements ActionListener {
 		panelTemperaturas = new JPanel();
 		panelTemperaturas.setBackground(new Color(128, 128, 128));
 		setContentPane(panelTemperaturas);
-		panelTemperaturas.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panelTemperaturas.setLayout(null);
 
 		JLabel lblTemperatura = new JLabel("Ingresa la temperatura a convertir:");
