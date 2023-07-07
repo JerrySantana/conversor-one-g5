@@ -2,8 +2,8 @@
 
 **Solución al Challenge ONE Back End - Java (Sprint 01) ➡️ Conversor de divisas.**
 
-![Inicio_app(2)](Portada2.png)
-![Inicio_app(1)](Portada.png)
+![Inicio_app(2)](portada2.png)
+![Inicio_app(1)](portada.png)
 
 **Contenido.**
 ---
