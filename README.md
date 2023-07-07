@@ -51,7 +51,7 @@
 <img src="Recursos/divisas6.png" width="200" height="200"> <img src="Recursos/temp5.png" width="200" height="200">
 
 ### **En el siguiente GIF podemos observar el funcionamiento del programa.**
-![Recursos/gif_funcionamiento](funcionamiento.gif)  
+![gif_funcionamiento](Recursos/funcionamiento.gif)  
 ***
 **4. Tecnologías utilizadas.**
 ---
