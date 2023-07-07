@@ -2,7 +2,7 @@
 
 **Solución al Challenge ONE Back End - Java (Sprint 01) ➡️ Conversor de divisas.**
 
-<img src="portada.png" width="200" height="200">
+<img src="portada1.png" width="200" height="200">
 <img src="portada2.png" width="200" height="200"> 
 
 **Contenido.**
@@ -34,7 +34,7 @@
 ---
   
 ### Dentro del programa tenemos las opciones de conversion de divisas y de conversion de temperatura.
-<img src="portada.png" width="200" height="200">
+<img src="portada1.png" width="200" height="200">
 <img src="portada2.png" width="200" height="200">  
 
 ### En el apartado de conversión de divisas tenemos dos ventanas, la primera nos muestra las tasas de conversión que se están utilizando y las monedas de las cuales se puede realizar la conversión.  
