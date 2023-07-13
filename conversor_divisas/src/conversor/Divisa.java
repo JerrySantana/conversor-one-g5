@@ -2,22 +2,25 @@ package conversor;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Clase que representa un conversor de divisas.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class Divisa {
 	private Divisas divisaOrigen;
 	private Divisas divisaDestino;
 	private double valorDivisa;
-
 	private static Map<Divisas, Map<Divisas, Double>> conversiones;
-
+	
+	// Establecemos un mapa de conversion de divisas
 	static {
-		
 		// Inicializamos el mapa de conversiones
 		conversiones = new HashMap<>();
 
 		// Agregamos las conversiones de pesos mexicanos a otras divisas
 		Map<Divisas, Double> conversionesPesosMexicanos = new HashMap<>();
-		conversionesPesosMexicanos.put(Divisas.MXN, 1.0);
+//		conversionesPesosMexicanos.put(Divisas.MXN, 1.0);
 		conversionesPesosMexicanos.put(Divisas.Dolar, 0.0586);
 		conversionesPesosMexicanos.put(Divisas.Libras, 0.0461);
 		conversionesPesosMexicanos.put(Divisas.Euro, 0.0538);
@@ -28,7 +31,7 @@ public class Divisa {
 		// Agregamos las conversiones de dólares a otras divisas
 		Map<Divisas, Double> conversionesDolares = new HashMap<>();
 		conversionesDolares.put(Divisas.MXN, 17.0477);
-		conversionesDolares.put(Divisas.Dolar, 1.0);
+//		conversionesDolares.put(Divisas.Dolar, 1.0);
 		conversionesDolares.put(Divisas.Libras, 0.7861);
 		conversionesDolares.put(Divisas.Euro, 0.9186);
 		conversionesDolares.put(Divisas.Yen, 144.4639);
@@ -39,7 +42,7 @@ public class Divisa {
 		Map<Divisas, Double> conversionesLibras = new HashMap<>();
 		conversionesLibras.put(Divisas.MXN, 21.6861);
 		conversionesLibras.put(Divisas.Dolar, 1.2718);
-		conversionesLibras.put(Divisas.Libras, 1.0);
+//		conversionesLibras.put(Divisas.Libras, 1.0);
 		conversionesLibras.put(Divisas.Euro, 1.1684);
 		conversionesLibras.put(Divisas.Yen, 183.7394);
 		conversionesLibras.put(Divisas.KRW, 1651.8422);
@@ -50,7 +53,7 @@ public class Divisa {
 		conversionesEuros.put(Divisas.MXN, 18.5595);
 		conversionesEuros.put(Divisas.Dolar, 1.0884);
 		conversionesEuros.put(Divisas.Libras, 0.8557);
-		conversionesEuros.put(Divisas.Euro, 1.0);
+//		conversionesEuros.put(Divisas.Euro, 1.0);
 		conversionesEuros.put(Divisas.Yen, 157.2467);
 		conversionesEuros.put(Divisas.KRW, 1413.7558);
 		conversiones.put(Divisas.Euro, conversionesEuros);
@@ -61,7 +64,7 @@ public class Divisa {
 		conversionesYenes.put(Divisas.Dolar, 0.0069);
 		conversionesYenes.put(Divisas.Libras, 0.0054);
 		conversionesYenes.put(Divisas.Euro, 0.0063);
-		conversionesYenes.put(Divisas.Yen, 1.0);
+//		conversionesYenes.put(Divisas.Yen, 1.0);
 		conversionesYenes.put(Divisas.KRW, 8.9963);
 		conversiones.put(Divisas.Yen, conversionesYenes);
 
@@ -72,30 +75,38 @@ public class Divisa {
 		conversionesWonSurcoreanos.put(Divisas.Libras, 0.000605);
 		conversionesWonSurcoreanos.put(Divisas.Euro, 0.000706);
 		conversionesWonSurcoreanos.put(Divisas.Yen, 0.1111);
-		conversionesWonSurcoreanos.put(Divisas.KRW, 1.0);
+//		conversionesWonSurcoreanos.put(Divisas.KRW, 1.0);
 		conversiones.put(Divisas.KRW, conversionesWonSurcoreanos);
 	}
-
+	
+	/**
+	 * Metodo constructor de Divisa, recibe como para parametros:
+	 * @param origen -> divisa desde la que se quiere hacer la conversion
+	 * @param destino -> divisa para la cual se quiere hacer la conversion
+	 * @param valor	-> el valor sobre el cual se va a realizar la conversion
+	 */
 	public Divisa(Divisas origen, Divisas destino, double valor) {
 		divisaOrigen = origen;
 		divisaDestino = destino;
 		valorDivisa = valor;
 	}
-
+	
+	/**
+	 * Metodo en el cual se realiza la conversion del valor proporcionado.
+	 * @return retorna el valor convertido de la divisa utilizando el factor de conversion
+	 */
 	public double convertir() {
-		double factorConversion = obtenerFactorConversion();
-		double valorConvertido = valorDivisa * factorConversion; 
-		return valorConvertido;
+//		double factorConversion = obtenerFactorConversion();
+//		double valorConvertido = valorDivisa * factorConversion;
+		return valorDivisa * obtenerFactorConversion();
 	}
-
+	
+	/**
+	 * Metodo para obtener el factor de conversion de la divisa de origen a la divisa de destino.
+	 * Utiliza la funcion {@code getOrDefault} de la clase {@link Map} para buscar el factor de conversion.
+	 * @return retorna el factor de conversion obtenido, o 1.0 si no lo encuentra (si la divisa de origen y destino son la misma).
+	 */
 	private double obtenerFactorConversion() {
-		try {
-			Map<Divisas, Double> conversionesOrigen = conversiones.get(divisaOrigen);
-			Double factorConversion = conversionesOrigen.get(divisaDestino);
-			return factorConversion;
-		} catch (NullPointerException ex) {
-			ex.printStackTrace();
-		}
-		return 0.0;
+		return conversiones.getOrDefault(divisaOrigen, new HashMap<>()).getOrDefault(divisaDestino, 1.0);
 	}
 }
