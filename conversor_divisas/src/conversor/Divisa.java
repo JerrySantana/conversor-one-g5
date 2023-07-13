@@ -80,7 +80,7 @@ public class Divisa {
 	}
 	
 	/**
-	 * Metodo constructor de Divisa, recibe como para parametros:
+	 * Metodo constructor de la clase.
 	 * @param origen -> divisa desde la que se quiere hacer la conversion
 	 * @param destino -> divisa para la cual se quiere hacer la conversion
 	 * @param valor	-> el valor sobre el cual se va a realizar la conversion

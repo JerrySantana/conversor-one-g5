@@ -1,79 +1,86 @@
 package conversor;
 
+/**
+ * Clase que representa un conversor de temperatura.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class Temperatura {
 	private Temperaturas temperaturaOrigen;
 	private Temperaturas temperaturaDestino;
 	private double valorTemperatura;
-
+	
+	/**
+	 * Metodo constructor de la clase.
+	 * @param origen -> tipo de grados de temperatura desde los que se quiere realizar la conversion.
+	 * @param destino -> tipo de grados de temperatura a los cuales se quiere realizar la conversion.
+	 * @param gradosTemperatura -> valor de los grados de temperatura sobre los cuales se realizara la conversion.
+	 */
 	public Temperatura(Temperaturas origen, Temperaturas destino, double gradosTemperatura) {
 		temperaturaOrigen = origen;
 		temperaturaDestino = destino;
 		valorTemperatura = gradosTemperatura;
 	}
-
+	
+	/**
+	 * Metodo que devuelve la conversion del valor propocionado.
+	 * @return retorna la conversion del valor a los grados de temperatura deseados.
+	 */
 	public double convertir() {
-		double temperaturaConvertida = 0;
 		switch (temperaturaOrigen) {
 		case Celsius:
-			temperaturaConvertida = conversionCelsius();
-			break;
+			return conversionCelsius();
 		case Fahrenheit:
-			temperaturaConvertida = conversionFahrenheit();
-			break;
+			return conversionFahrenheit();
 		case Kelvin:
-			temperaturaConvertida = conversionKelvin();
-			break;
+			return conversionKelvin();
 		default:
-			break;
+			return 0;
 		}
-		return temperaturaConvertida;
 	}
-
+	
+	/**
+	 * Metodo en donde se obtienen los factores de conversion a partir de grados Celsius, hacia grados Fahrenheit o Kelvin.
+	 * @return retorna el valor de la conversion a los grados elegidos o retorna el valor mismo (si los grados origen y destino son ambos Celsius).
+	 */
 	private double conversionCelsius() {
-		double temperaturaAuxiliar = 0;
 		switch (temperaturaDestino) {
-		case Celsius:
-			temperaturaAuxiliar = valorTemperatura;
-			break;
 		case Fahrenheit:
-			temperaturaAuxiliar = (valorTemperatura * (9.0 / 5.0)) + 32;
-			break;
+			return (valorTemperatura * (9.0 / 5.0)) + 32;
 		case Kelvin:
-			temperaturaAuxiliar = valorTemperatura + 273.15;
-			break;
+			return valorTemperatura + 273.15;
+		default:
+			return valorTemperatura;
 		}
-		return temperaturaAuxiliar;
 	}
 
+	/**
+	 * Metodo en donde se obtienen los factores de conversion a partir de grados Fahrenheit, hacia grados Celsius o Kelvin.
+	 * @return retorna el valor de la conversion a los grados elegidos o retorna el valor mismo (si los grados origen y destino son ambos Fahrenheit).
+	 */
 	private double conversionFahrenheit() {
-		double temperaturaAuxiliar = 0;
 		switch (temperaturaDestino) {
 		case Celsius:
-			temperaturaAuxiliar = (valorTemperatura - 32) * (5.0 / 9.0);
-			break;
-		case Fahrenheit:
-			temperaturaAuxiliar = valorTemperatura;
-			break;
+			return (valorTemperatura - 32) * (5.0 / 9.0);
 		case Kelvin:
-			temperaturaAuxiliar = (valorTemperatura - 32) * (5.0 / 9.0) + 273.15;
-			break;
+			return (valorTemperatura - 32) * (5.0 / 9.0) + 273.15;
+		default:
+			return valorTemperatura;
 		}
-		return temperaturaAuxiliar;
 	}
 
+	/**
+	 * Metodo en donde se obtienen los factores de conversion a partir de grados Celsius, hacia grados Celsius o Fahrenheit.
+	 * @return retorna el valor de la conversion a los grados elegidos o retorna el valor mismo (si los grados origen y destino son ambos Kelvin).
+	 */
 	private double conversionKelvin() {
-		double temperaturaAuxiliar = 0;
 		switch (temperaturaDestino) {
 		case Celsius:
-			temperaturaAuxiliar = valorTemperatura - 273.15;
-			break;
+			return valorTemperatura - 273.15;
 		case Fahrenheit:
-			temperaturaAuxiliar = (valorTemperatura - 273.15) * (9.0 / 5.0) + 32;
-			break;
-		case Kelvin:
-			temperaturaAuxiliar = valorTemperatura;
-			break;
+			return (valorTemperatura - 273.15) * (9.0 / 5.0) + 32;
+		default:
+			return valorTemperatura;
 		}
-		return temperaturaAuxiliar;
 	}
 }
