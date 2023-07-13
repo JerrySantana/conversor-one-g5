@@ -12,11 +12,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
+/**
+ * Clase para crear la ventana principal del programa.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class VentanaInicio extends JFrame {
 
 	private JPanel panelPrincipal;
 	
-	// Crea la ventana de selección inicial.
+	// Define el titulo y el tamaño de la ventana de selección inicial.
+	/**
+	 * Metodo constructor de la clase.
+	 * Define el titulo y el tamaño de la ventana. Despues invoca a otro metodo para inicializar los componentes de la ventana.
+	 */
 	public VentanaInicio() {
 		setTitle("Conversor");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,6 +34,9 @@ public class VentanaInicio extends JFrame {
 	}
 	
 	// Crea y muestra la ventana y sus componentes.
+	/**
+	 * Metodo que crea la ventana y sus componenetes y los muestra.
+	 */
 	private void componentes() {
 		panelPrincipal = new JPanel();
 		panelPrincipal.setBackground(new Color(128, 128, 128));
@@ -71,7 +83,5 @@ public class VentanaInicio extends JFrame {
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		setResizable(false);
-		
-		
 	}
 }

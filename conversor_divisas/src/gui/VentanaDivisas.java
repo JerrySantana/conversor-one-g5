@@ -19,6 +19,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
+/**
+ * Clase para crear la ventana para la conversion de divisas.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class VentanaDivisas extends JFrame implements ActionListener {
 
 	private JPanel panelDivisas;
@@ -28,7 +33,11 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 	private JButton btnConvertir;
 	private JLabel lblResultado;
 
-	// Crea la ventana de conversión de divisas.
+	// Define el titulo y el tamanio de la ventana de conversión de divisas.
+	/**
+	 * Metodo constructor de la clase.
+	 * Define el titulo y el tamaño de la ventana. Despues invoca a otro metodo para inicializar los componentes de la ventana.
+	 */
 	public VentanaDivisas() {
 		setTitle("Conversor Divisas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,6 +46,9 @@ public class VentanaDivisas extends JFrame implements ActionListener {
 	}
 
 	// Crea y muestra la ventana y sus componentes.
+	/**
+	 * Metodo que crea la ventana y sus componentes y los muestra.
+	 */
 	private void componentes() {
 		panelDivisas = new JPanel();
 		VentanaTipoDeCambio ventana = new VentanaTipoDeCambio();

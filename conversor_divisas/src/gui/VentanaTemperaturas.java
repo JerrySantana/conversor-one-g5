@@ -19,6 +19,11 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.Color;
 
+/**
+ * Clase para crear una ventana de conversion de grados de temperatura.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class VentanaTemperaturas extends JFrame implements ActionListener {
 
 	private JPanel panelTemperaturas;
@@ -30,7 +35,7 @@ public class VentanaTemperaturas extends JFrame implements ActionListener {
 	private JTable table;
 
 	/**
-	 * Crea la ventana de conversion de temperaturas en grados.
+	 * Define el titulo y el tamaño de la ventana. Despues invoca a un metodo para inicializar su componentes.
 	 */
 	public VentanaTemperaturas() {
 		setTitle("Conversor Temperatura");
@@ -39,6 +44,9 @@ public class VentanaTemperaturas extends JFrame implements ActionListener {
 		componentes();
 	}
 
+	/**
+	 * Metodo que crea la ventana y sus componentes y los muestra.
+	 */
 	private void componentes() {
 		panelTemperaturas = new JPanel();
 		panelTemperaturas.setBackground(new Color(128, 128, 128));

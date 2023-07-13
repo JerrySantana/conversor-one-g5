@@ -9,21 +9,29 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
+/**
+ * Clase para crear una ventana para mostrar el tipo de cambio utilizado en la conversion de divisas.
+ * @author Gerardo Santana
+ * @version 1.0
+ */
 public class VentanaTipoDeCambio extends JFrame {
 
 	private JPanel panelTipoDeCambio;
-
+	
 	/**
-	 * Create the frame.
+	 * Metodo constructor de la clase.
+	 * Define el titulo y el tamaño de la ventana. Despues invoca a otro metodo para inicializas los componentes de la ventana.
 	 */
 	public VentanaTipoDeCambio() {
 		setTitle("Tasas de cambio");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(690, 210);
 		componentes();
-		
 	}
 	
+	/**
+	 * Metodo que crea la ventana y sus componentes y los muestra.
+	 */
 	private void componentes() {
 		panelTipoDeCambio = new JPanel();
 		panelTipoDeCambio.setBorder(new EmptyBorder(5, 5, 5, 5));
