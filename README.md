@@ -28,6 +28,7 @@
 **2. Avance**
 ---
 ### El proyecto ya se finalizó. Aún se podrían agregar otras características que lo convirtieran en un proyecto más completo.
+### Se agregó otro Java project en el cuál se realizó el conversor tomando como base la misma lógica para resolverlo, pero utilizando JavaFX en lugar de Swing y AWT.
 ***
 **3. Pruebas y ejemplos**
 ---
