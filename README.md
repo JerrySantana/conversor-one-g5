@@ -29,7 +29,7 @@
 ---
 ### El proyecto ya se finalizó. Aún se podrían agregar otras características que lo convirtieran en un proyecto más completo.
 ### Se agregó otro Java project en el cuál se realizó el conversor tomando como base la misma lógica para resolverlo, pero utilizando JavaFX en lugar de Swing y AWT.
-<img src="Recursos/javafx/portada1.png" width="200" height="200"> <img src="Recursos/javafx/portada2.png" width="200" height="200">
+<img src="Recursos/javafx/portada1.png" width="300" height="300"> <img src="Recursos/javafx/portada2.png" width="300" height="300">
 
 ***
 **3. Pruebas y ejemplos**
