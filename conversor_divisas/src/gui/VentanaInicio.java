@@ -48,9 +48,9 @@ public class VentanaInicio extends JFrame {
 		lblPregunta.setBounds(30, 10, 200, 30);
 		getContentPane().add(lblPregunta);
 		
-		JComboBox cbTipoConversion = new JComboBox();
+		JComboBox<String> cbTipoConversion = new JComboBox<String>();
 		cbTipoConversion.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 20));
-		cbTipoConversion.setModel(new DefaultComboBoxModel(new String[] {"Divisas", "Temperatura"}));
+		cbTipoConversion.setModel(new DefaultComboBoxModel<String>(new String[] {"Divisas", "Temperatura"}));
 		cbTipoConversion.setBounds(15, 60, 240, 35);
 		getContentPane().add(cbTipoConversion);
 		

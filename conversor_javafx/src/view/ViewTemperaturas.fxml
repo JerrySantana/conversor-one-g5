@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewTemperaturasController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <TextField fx:id="txtValorGrados" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Ingresa un valor numérico..." VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ComboBox fx:id="cbTemperaturaOrigen" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0" promptText="De:" VBox.vgrow="ALWAYS" />
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ComboBox fx:id="cbTemperaturaDestino" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0" promptText="A:" VBox.vgrow="ALWAYS" />
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="btnConvertirGrados" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#convertirButton" prefHeight="33.0" prefWidth="120.0" text="Convertir" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="lblResultadoConversion" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Total:" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="btnVolverTemperatura" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#volverButton" text="Volver" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
