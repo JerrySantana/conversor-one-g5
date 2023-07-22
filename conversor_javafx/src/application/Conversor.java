@@ -13,6 +13,7 @@ public class Conversor extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("/view/ViewPrincipal.fxml"));
 		Scene scene = new Scene(root);
+		primaryStage.setTitle("Conversor - ONE Grupo 5.");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

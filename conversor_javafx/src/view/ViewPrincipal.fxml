@@ -9,52 +9,66 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="mainWindow" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewPrincipalController">
-   <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" text="¿Qué tipo de conversión deseas realizar?" textAlignment="CENTER">
-         <font>
-            <Font name="Georgia" size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets bottom="30.0" top="40.0" />
-         </VBox.margin>
-      </Label>
-      <ComboBox fx:id="cbConversion" prefWidth="260.0" promptText="Elige una conversión..." VBox.vgrow="ALWAYS">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-         <padding>
-            <Insets bottom="5.0" top="5.0" />
-         </padding>
-      </ComboBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="btnMainNext" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#mainNextButtonAction" text="Siguiente" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets right="30.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Georgia" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnMainClose" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#mainExitButtonAction" text="Salir" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="30.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Georgia" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-      </HBox>
-   </children>
+<VBox fx:id="mainWindow" alignment="TOP_CENTER"
+	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefHeight="260.0" prefWidth="400.0"
+	xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.ViewPrincipalController">
+	<children>
+		<Label alignment="CENTER" contentDisplay="CENTER"
+			text="¿Qué tipo de conversión deseas realizar?"
+			textAlignment="CENTER">
+			<font>
+				<Font name="Georgia" size="20.0" />
+			</font>
+			<VBox.margin>
+				<Insets bottom="30.0" top="40.0" />
+			</VBox.margin>
+		</Label>
+		<ComboBox fx:id="cbConversion" prefWidth="260.0"
+			promptText="Elige una conversión..." VBox.vgrow="ALWAYS">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<VBox.margin>
+				<Insets bottom="10.0" top="10.0" />
+			</VBox.margin>
+			<padding>
+				<Insets bottom="5.0" top="5.0" />
+			</padding>
+		</ComboBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+			<children>
+				<Button fx:id="btnMainNext" alignment="CENTER"
+					contentDisplay="CENTER" mnemonicParsing="false"
+					onAction="#mainNextButtonAction" text="Siguiente"
+					textAlignment="CENTER" HBox.hgrow="ALWAYS">
+					<HBox.margin>
+						<Insets right="30.0" />
+					</HBox.margin>
+					<font>
+						<Font name="Georgia" size="18.0" />
+					</font>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</Button>
+				<Button fx:id="btnMainClose" alignment="CENTER"
+					contentDisplay="CENTER" mnemonicParsing="false"
+					onAction="#mainExitButtonAction" text="Salir"
+					textAlignment="CENTER" HBox.hgrow="ALWAYS">
+					<HBox.margin>
+						<Insets left="30.0" />
+					</HBox.margin>
+					<font>
+						<Font name="Georgia" size="18.0" />
+					</font>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</Button>
+			</children>
+		</HBox>
+	</children>
 </VBox>

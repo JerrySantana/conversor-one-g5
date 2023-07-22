@@ -2,8 +2,10 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Clase que representa un conversor de divisas.
+ * 
  * @author Gerardo Santana
  * @version 1.0
  */
@@ -12,7 +14,7 @@ public class Divisa {
 	private Divisas divisaDestino;
 	private double valorDivisa;
 	private static Map<Divisas, Map<Divisas, Double>> conversiones;
-	
+
 	// Establecemos un mapa de conversion de divisas
 	static {
 		// Inicializamos el mapa de conversiones
@@ -78,36 +80,41 @@ public class Divisa {
 //		conversionesWonSurcoreanos.put(Divisas.KRW, 1.0);
 		conversiones.put(Divisas.KRW, conversionesWonSurcoreanos);
 	}
-	
+
 	/**
 	 * Metodo constructor de la clase.
-	 * @param origen -> divisa desde la que se quiere hacer la conversion
+	 * 
+	 * @param origen  -> divisa desde la que se quiere hacer la conversion
 	 * @param destino -> divisa para la cual se quiere hacer la conversion
-	 * @param valor	-> el valor sobre el cual se va a realizar la conversion
+	 * @param valor   -> el valor sobre el cual se va a realizar la conversion
 	 */
 	public Divisa(Divisas origen, Divisas destino, double valor) {
 		divisaOrigen = origen;
 		divisaDestino = destino;
 		valorDivisa = valor;
 	}
-	
+
 	/**
 	 * Metodo en el cual se realiza la conversion del valor proporcionado.
-	 * @return retorna el valor convertido de la divisa utilizando el factor de conversion
+	 * 
+	 * @return retorna el valor convertido de la divisa utilizando el factor de
+	 *         conversion
 	 */
 	public double convertir() {
 //		double factorConversion = obtenerFactorConversion();
 //		double valorConvertido = valorDivisa * factorConversion;
 		return valorDivisa * obtenerFactorConversion();
 	}
-	
+
 	/**
-	 * Metodo para obtener el factor de conversion de la divisa de origen a la divisa de destino.
-	 * Utiliza la funcion {@code getOrDefault} de la clase {@link Map} para buscar el factor de conversion.
-	 * @return retorna el factor de conversion obtenido, o 1.0 si no lo encuentra (si la divisa de origen y destino son la misma).
+	 * Metodo para obtener el factor de conversion de la divisa de origen a la
+	 * divisa de destino. Utiliza la funcion {@code getOrDefault} de la clase
+	 * {@link Map} para buscar el factor de conversion.
+	 * 
+	 * @return retorna el factor de conversion obtenido, o 1.0 si no lo encuentra
+	 *         (si la divisa de origen y destino son la misma).
 	 */
 	private double obtenerFactorConversion() {
 		return conversiones.getOrDefault(divisaOrigen, new HashMap<>()).getOrDefault(divisaDestino, 1.0);
 	}
 }
-

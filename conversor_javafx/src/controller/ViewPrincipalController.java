@@ -17,28 +17,28 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ViewPrincipalController implements Initializable {
+
 	@FXML
 	private ComboBox<String> cbConversion;
-
 	@FXML
 	private Button btnMainNext;
-
 	@FXML
 	private Button btnMainExit;
 
 	@FXML
 	private void mainNextButtonAction(ActionEvent event) {
-		if(cbConversion.getSelectionModel().getSelectedItem() == "Divisas") {
+		if (cbConversion.getSelectionModel().getSelectedItem() == "Divisas") {
 			try {
-			    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewDivisas.fxml"));
-			    Parent root1 = (Parent) fxmlLoader.load();
-			    Stage stage = new Stage();
-			    stage.setScene(new Scene(root1));
-			    stage.initModality(Modality.WINDOW_MODAL);
-			    stage.initOwner(((Node) (event.getSource())).getScene().getWindow());
-			    stage.show();
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ViewDivisas.fxml"));
+				Parent root1 = (Parent) fxmlLoader.load();
+				Stage stage = new Stage();
+				stage.setScene(new Scene(root1));
+				stage.initModality(Modality.WINDOW_MODAL);
+				stage.initOwner(((Node) (event.getSource())).getScene().getWindow());
+				stage.setTitle("Conversor divisas - ONE Grupo 5.");
+				stage.show();
 			} catch (Exception ex) {
-			    ex.printStackTrace();
+				ex.printStackTrace();
 			}
 		} else {
 			try {
@@ -48,6 +48,7 @@ public class ViewPrincipalController implements Initializable {
 				stage.setScene(new Scene(root2));
 				stage.initModality(Modality.WINDOW_MODAL);
 				stage.initOwner(((Node) (event.getSource())).getScene().getWindow());
+				stage.setTitle("Conversor temperatura - ONE Grupo 5.");
 				stage.show();
 			} catch (Exception ex) {
 				ex.printStackTrace();

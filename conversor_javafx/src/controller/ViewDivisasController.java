@@ -40,15 +40,17 @@ public class ViewDivisasController implements Initializable {
 			lblResultadoConversion.setText(resultadoConversion.convertir() + " " + cbDivisaDestino.getValue().name());
 		} catch (NumberFormatException ex) {
 			lblResultadoConversion.setText("Valor inválido.");
-			JOptionPane.showMessageDialog(null, "Valor inválido, revisa los datos ingresados.", "Valor inválido.", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Valor inválido, revisa los datos ingresados.", "Valor inválido.",
+					JOptionPane.ERROR_MESSAGE);
 		} catch (NullPointerException ex) {
 			lblResultadoConversion.setText("");
-			JOptionPane.showMessageDialog(null, "Hubo un problema, intentlo nuevamente.", "Problema de ejecución.", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Hubo un problema, intentlo nuevamente.", "Problema de ejecución.",
+					JOptionPane.ERROR_MESSAGE);
 		} finally {
 			txtValorDivisa.setText("");
 		}
 	}
-	
+
 	@FXML
 	private void volverButton(ActionEvent event) {
 		((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
@@ -57,7 +59,8 @@ public class ViewDivisasController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ArrayList<Divisas> divisas = new ArrayList<>();
-		Collections.addAll(divisas, new Divisas[] {Divisas.Dolar, Divisas.Euro, Divisas.Libras, Divisas.Yen, Divisas.KRW, Divisas.MXN});
+		Collections.addAll(divisas,
+				new Divisas[] { Divisas.Dolar, Divisas.Euro, Divisas.Libras, Divisas.Yen, Divisas.KRW, Divisas.MXN });
 		cbDivisaOrigen.getItems().addAll(divisas);
 		cbDivisaDestino.getItems().addAll(divisas);
 	}
