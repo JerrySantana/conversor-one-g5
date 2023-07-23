@@ -1,13 +1,13 @@
 # <em> Conversor de divisas y temperatura. </em>
 
-**Solución al Challenge ONE Back End - Java (Sprint 01) ➡️ Conversor de divisas.**
+**Solución al Challenge ONE Back End - Java (Sprint 01) ➡️ Conversor de divisas. ❤️**
 
 <img src="Recursos/portada1.png" width="200" height="200"> <img src="Recursos/portada2.png" width="200" height="200"> 
 
 **Contenido.**
 ---
 ### 1. Descripción.
-### 2. Avance.
+### 2. Actualizaciones.
 ### 3. Pruebas y ejemplos.
 ### 4. Tecnologías utilizadas.
 ### 5. Créditos.
@@ -25,11 +25,12 @@
 
 ### Se pueden convertir grados de temperatura desde y hacia *Celsius*, *Fahrenheit* y *Kelvin*.
 ***
-**2. Avance**
+**2. Actualizaciones.**
 ---
-### El proyecto ya se finalizó. Aún se podrían agregar otras características que lo convirtieran en un proyecto más completo.
 ### Se agregó otro Java project en el cuál se realizó el conversor tomando como base la misma lógica para resolverlo, pero utilizando JavaFX en lugar de Swing y AWT.
 <img src="Recursos/javafx/portada1.png" width="300" height="300"> <img src="Recursos/javafx/portada2.png" width="300" height="300">
+---
+### Se agregó la forma de obtener información en tiempo real del tipo de cambio actual a partir de la página [ExchangeRate-API](https://www.exchangerate-api.com/), para poder ofrecer una conversión más exacta. Esta actualización se realizó en el proyecto **conversor_javafx**
 
 ***
 **3. Pruebas y ejemplos**
