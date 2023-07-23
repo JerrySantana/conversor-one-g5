@@ -27,10 +27,10 @@
 ***
 **2. Actualizaciones.**
 ---
-### Se agregó otro Java project en el cuál se realizó el conversor tomando como base la misma lógica para resolverlo, pero utilizando JavaFX en lugar de Swing y AWT.
+### (21/07/2023) Se agregó otro Java project en el cuál se realizó el conversor tomando como base la misma lógica para resolverlo, pero utilizando JavaFX en lugar de Swing y AWT.
 <img src="Recursos/javafx/portada1.png" width="300" height="300"> <img src="Recursos/javafx/portada2.png" width="300" height="300">
 ---
-### Se agregó la forma de obtener información en tiempo real del tipo de cambio actual a partir de la página [ExchangeRate-API](https://www.exchangerate-api.com/), para poder ofrecer una conversión más exacta. Esta actualización se realizó en el proyecto **conversor_javafx**
+### (23/07/2023) Se agregó la forma de obtener información en tiempo real del tipo de cambio actual a partir de la página [ExchangeRate-API](https://www.exchangerate-api.com/), para poder ofrecer una conversión más exacta. Esta actualización se realizó en el proyecto **conversor_javafx**
 
 ***
 **3. Pruebas y ejemplos**
