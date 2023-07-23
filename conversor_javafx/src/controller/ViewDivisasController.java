@@ -37,7 +37,7 @@ public class ViewDivisasController implements Initializable {
 			lblResultadoConversion.setText("");
 			double valor = Double.parseDouble(txtValorDivisa.getText());
 			resultadoConversion = new Divisa(cbDivisaOrigen.getValue(), cbDivisaDestino.getValue(), valor);
-			lblResultadoConversion.setText(resultadoConversion.convertir() + " " + cbDivisaDestino.getValue().name());
+			lblResultadoConversion.setText(resultadoConversion.convertir() + " " + cbDivisaDestino.getValue().getName());
 		} catch (NumberFormatException ex) {
 			lblResultadoConversion.setText("Valor inválido.");
 			JOptionPane.showMessageDialog(null, "Valor inválido, revisa los datos ingresados.", "Valor inválido.",
@@ -60,7 +60,7 @@ public class ViewDivisasController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ArrayList<Divisas> divisas = new ArrayList<>();
 		Collections.addAll(divisas,
-				new Divisas[] { Divisas.Dolar, Divisas.Euro, Divisas.Libras, Divisas.Yen, Divisas.KRW, Divisas.MXN });
+				new Divisas[] { Divisas.USD, Divisas.EUR, Divisas.GBP, Divisas.JPY, Divisas.KRW, Divisas.MXN });
 		cbDivisaOrigen.getItems().addAll(divisas);
 		cbDivisaDestino.getItems().addAll(divisas);
 	}

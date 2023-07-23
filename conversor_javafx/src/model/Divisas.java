@@ -10,25 +10,40 @@ public enum Divisas {
 	/**
 	 * Dolar estadounidense
 	 */
-	Dolar,
+	USD("USD", "Dolar estadounidense"),
 	/**
 	 * Euro
 	 */
-	Euro,
+	EUR("EUR", "Euro"),
 	/**
 	 * Libra esterlina
 	 */
-	Libras,
+	GBP("GBP", "Libra esterlina"),
 	/**
 	 * Yen japones
 	 */
-	Yen,
+	JPY("JPY", "Yen japones"),
 	/**
 	 * Won surcoreano
 	 */
-	KRW,
+	KRW("KRW", "Won surcoreano"),
 	/**
 	 * Peso mexicano
 	 */
-	MXN
+	MXN("MXN", "Peso mexicano");
+	
+	private String code, name;
+	
+	Divisas(String code, String name) {
+		this.code = code;
+		this.name = name;
+	}
+	
+	public String getCode() {
+		return code;
+	}
+	
+	public String getName() {
+		return name;
+	}
 }
