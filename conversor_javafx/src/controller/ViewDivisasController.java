@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import model.DataLoader;
 import model.Divisa;
 import model.Divisas;
 import javafx.event.ActionEvent;
@@ -63,6 +64,8 @@ public class ViewDivisasController implements Initializable {
 				new Divisas[] { Divisas.USD, Divisas.EUR, Divisas.GBP, Divisas.JPY, Divisas.KRW, Divisas.MXN });
 		cbDivisaOrigen.getItems().addAll(divisas);
 		cbDivisaDestino.getItems().addAll(divisas);
+		System.out.println(divisas);
+		DataLoader.obtainExchangeRateData(divisas);
 	}
 
 }
