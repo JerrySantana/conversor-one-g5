@@ -38,8 +38,9 @@ public class ViewTemperaturasController implements Initializable {
 			double valor = Double.parseDouble(txtValorGrados.getText());
 			resultadoConversion = new Temperatura(cbTemperaturaOrigen.getValue(), cbTemperaturaDestino.getValue(),
 					valor);
-			lblResultadoConversion
-					.setText(resultadoConversion.convertir() + " " + cbTemperaturaDestino.getValue().name());
+			String resultado = String.format("%.3f° %s", resultadoConversion.convertir(),
+					cbTemperaturaDestino.getValue().name());
+			lblResultadoConversion.setText(resultado);
 		} catch (NumberFormatException ex) {
 			lblResultadoConversion.setText("Valor inválido.");
 			JOptionPane.showMessageDialog(null, "Valor inválido, revisa los datos ingresados.", "Valor inválido.",
